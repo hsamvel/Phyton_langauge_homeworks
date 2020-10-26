@@ -1,13 +1,16 @@
-list_1 = [4,8,12]
-n = input().split(',')
-for el in n:
-    list_1.append(int(el))
+list_1 = [1,5,20,30]
+d = list_1[-1]-list_1[-2]
+list_1.append(d)
 list_1.sort()
-i = 2
-d = list_1[2] - list_1[1]
-while i < len(list_1) and list_1[i] - list_1[i-1] == d:
-    i += 1
-if i == len(list_1):
-    print(True, list_1)
+new_list = []
+for i in range(len(list_1)-1,0,-1):
+    d=list_1[1]
+    if list_1[i]-d == list_1[i-1] + d:
+        new_list.append(list_1[i]-d)
+for el in new_list:
+    list_1.append(el)
+list_1.sort()
+if sum(list_1[1:]) % d == 0:
+    print(True,list_1)
 else:
     print(False)
