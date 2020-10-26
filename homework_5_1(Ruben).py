@@ -1,7 +1,7 @@
-n = input().split(',')
-m = [input().split(',') for i in range(len(n))]
+n = input().split(', ')
+m = [input().split(', ') for i in range(len(n))]
 our_vars = []
-names = input().split(',')
+names = input().split(', ')
 new_list = []
 for i in range(len(m)):
     for elem in names:
