@@ -14,10 +14,15 @@ def answer_queries(k,*query_counts):
                 a = a-(k-el)
             elif el + a < k:
                 return count
-        if a == 0:
+        if a > k:
+            while a>=0:
+                a-=k
+                count+=1
+            return count
+        elif a==0:
             return count + 1
         else:
-            return count 
+            return count
         
     
 print(answer_queries(5,10,5,5,3,2,1))
