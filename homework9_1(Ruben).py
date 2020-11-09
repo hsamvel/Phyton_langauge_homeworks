@@ -1,4 +1,4 @@
-string_1 = input()
+# 9_1
 def buildPalindrome(string_1):
     if string_1 == string_1[-1::-1]:
         return string_1
@@ -11,9 +11,4 @@ def buildPalindrome(string_1):
     return buildPalindrome(string_1)
 
 
-print(buildPalindrome(string_1))
-
-#abcdc
-#ababab
-#abba
-#abaa
+print(buildPalindrome('abaa'))
