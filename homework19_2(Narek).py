@@ -1,5 +1,7 @@
 def func_1(n):
-    for i in range(1,n+1):
-        print(i,end='')
+    q = n
+    while q >=1:
+        print(n-(q-1),end='')
+        q = q -1
 
 func_1(13)
